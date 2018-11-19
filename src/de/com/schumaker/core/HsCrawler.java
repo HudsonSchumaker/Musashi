@@ -16,7 +16,7 @@ public class HsCrawler {
 
     public void doScan() throws IOException{
         
-         Path configFilePath = Paths.get("/Users/hudsonschumaker/Downloads/");
+         Path configFilePath = Paths.get("/Users/hudsonschumaker/Downloads/t");
        
       //  Path configFilePath = Paths.get("/Users/hudsonschumaker/Documents");
         

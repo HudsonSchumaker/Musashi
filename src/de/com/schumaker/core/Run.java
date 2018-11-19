@@ -12,14 +12,23 @@ public class Run {
 
     public static void main(String... args) throws IOException {
         Run.mongoDBSetUp();
+        
         HsCrawler crawler = new HsCrawler();
         crawler.doScan();
-
-         // ConnectionFactory.getInstance().getDatabase().createCollection("HudsonLuZI");
         
+        
+        
+        
+        Run.mongoDBTeardown();        
     }
     
     private static void mongoDBSetUp(){
+        System.out.println("connecting...");
         HsConnectionFactory.getInstance();
+    }
+    
+    private static void mongoDBTeardown(){
+        System.out.println("disconnecting...");
+        HsConnectionFactory.getInstance().closeConnection();
     }
 }

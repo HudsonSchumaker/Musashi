@@ -1,4 +1,4 @@
-package de.com.schumaker.core.entity;
+package de.com.schumaker.core.builder;
 
 import de.com.schumaker.core.util.HsUtil;
 import java.nio.file.Path;
