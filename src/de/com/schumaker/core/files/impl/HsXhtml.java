@@ -10,16 +10,16 @@ import de.com.schumaker.core.reader.impl.HsXHtmlReaderFile;
  *
  * @author hudson schumaker
  */
-public class HsHtml extends HsFile implements HsReadable {
+public class HsXhtml extends HsFile implements HsReadable {
     
-    public HsHtml(){
+    public HsXhtml(){
     }
     
-    public HsHtml(String path){
+    public HsXhtml(String path){
         super.setPath(path);
     }
     
-    public HsHtml (String path, String name, String ext){
+    public HsXhtml (String path, String name, String ext){
        super(path, name, ext);
     }
     
@@ -41,6 +41,6 @@ public class HsHtml extends HsFile implements HsReadable {
 
     @Override
     public HsReadable newOne(String path, String name, String ext) {
-        return new HsHtml(path, name, ext);
+        return new HsXhtml(path, name, ext);
     }
 }

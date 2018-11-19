@@ -7,7 +7,7 @@ import lombok.Setter;
 
 /**
  *
- * @author hudsonschumaker
+ * @author hudson schumaker
  */
 @Getter
 @Setter

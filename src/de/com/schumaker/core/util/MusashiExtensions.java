@@ -4,7 +4,7 @@ package de.com.schumaker.core.util;
  *
  * @author hudsonschumaker
  */
-public class MusashiCommons {
+public class MusashiExtensions {
     
     public static final String HTML  = "html";
     public static final String CSS   = "css";
@@ -21,6 +21,6 @@ public class MusashiCommons {
     public static final String DOC   = "doc"; 
     public static final String DOCX  = "docx"; 
     
-    private MusashiCommons(){
+    private MusashiExtensions(){
     }
 }

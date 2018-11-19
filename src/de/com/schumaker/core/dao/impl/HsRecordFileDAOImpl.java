@@ -1,8 +1,7 @@
-
 package de.com.schumaker.core.dao.impl;
 
-import de.com.schumaker.core.entity.HsRecordFile;
 import de.com.schumaker.core.dao.HsRecordFileDAO;
+import org.bson.Document;
 
 /**
  *
@@ -11,8 +10,10 @@ import de.com.schumaker.core.dao.HsRecordFileDAO;
 public class HsRecordFileDAOImpl implements HsRecordFileDAO{
 
     @Override
-    public void Salvar(HsRecordFile rf) {
-        System.out.println(rf.getContent());
-       // System.out.println(rf.getExt());
+    public void Salvar(Document doc) {
+        System.out.println(doc.getString("Name") +" - " + doc.getString("Date") + " - "+ doc.getString("Size"));
+       // System.out.println(doc.getString("Content"));
+       // System.out.println();
+       // System.out.println();
     }
 }

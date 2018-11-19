@@ -16,10 +16,11 @@ public class HsCrawler {
 
     public void doScan() throws IOException{
         
-        // Path configFilePath = Paths.get("/Users/hudsonschumaker/Downloads/temp/Pdf");
+         Path configFilePath = Paths.get("/Users/hudsonschumaker/Downloads/");
        
-        Path configFilePath = Paths.get("/Users/hudsonschumaker/Documents");
+      //  Path configFilePath = Paths.get("/Users/hudsonschumaker/Documents");
         
+      
         Files.walk(configFilePath)
             .filter(p -> HsSupportedFiles.getInstance().isSupported(HsUtil.getFileExtension(p.toString())))
             .map(Path::normalize)

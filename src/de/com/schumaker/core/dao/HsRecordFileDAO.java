@@ -1,11 +1,11 @@
 package de.com.schumaker.core.dao;
 
-import de.com.schumaker.core.entity.HsRecordFile;
+import org.bson.Document;
 
 /**
  *
  * @author hudson schumaker
  */
 public interface HsRecordFileDAO {
-    void Salvar(HsRecordFile rf);
+    void Salvar(Document doc);
 }

@@ -14,7 +14,7 @@ public class HsReadableService {
         new HsRecordFileDAOImpl().Salvar(new HsRecordFileBuilder()
                 .withName(tipo.getName())
                 .withExt(tipo.getExt())
-                .withPath(tipo.getPath().normalize().toString())
+                .withPath(tipo.getPath())
                 .withContent(tipo.getContent())
                 .build());
     }
