@@ -9,6 +9,8 @@ public class MusashiExtensions {
     public static final String HTML  = "html";
     public static final String CSS   = "css";
     public static final String CS    = "cs";
+    public static final String C     = "c";
+    public static final String CPP   = "cpp";
     public static final String JS    = "js";
     public static final String XHTML = "xhtml";
     public static final String HTM   = "htm";

@@ -3,6 +3,8 @@ package de.com.schumaker.core;
 import de.com.schumaker.core.util.MusashiExtensions;
 import de.com.schumaker.core.files.impl.HsHtml;
 import de.com.schumaker.core.files.HsReadable;
+import de.com.schumaker.core.files.impl.HsC;
+import de.com.schumaker.core.files.impl.HsCpp;
 import de.com.schumaker.core.files.impl.HsCs;
 import de.com.schumaker.core.files.impl.HsCss;
 import de.com.schumaker.core.files.impl.HsDoc;
@@ -38,7 +40,9 @@ public class HsSupportedFiles {
         SUPPORTED_FILES.put(MusashiExtensions.JS,    new HsJs());
         SUPPORTED_FILES.put(MusashiExtensions.JAVA,  new HsJava());
         SUPPORTED_FILES.put(MusashiExtensions.JSP,   new HsJsp());
+        SUPPORTED_FILES.put(MusashiExtensions.C,     new HsC());
         SUPPORTED_FILES.put(MusashiExtensions.CS,    new HsCs());
+        SUPPORTED_FILES.put(MusashiExtensions.CPP,   new HsCpp());
         SUPPORTED_FILES.put(MusashiExtensions.TXT,   new HsTxt());
         SUPPORTED_FILES.put(MusashiExtensions.RTF,   new HsRtf());
         SUPPORTED_FILES.put(MusashiExtensions.PDF,   new HsPdf());
