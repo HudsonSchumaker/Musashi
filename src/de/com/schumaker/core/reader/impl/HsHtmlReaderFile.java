@@ -13,7 +13,7 @@ import javax.swing.text.DefaultEditorKit;
  *
  * @author hudson schumaker
  */
-public class HsXHtmlReaderFile implements HsReader{
+public class HsHtmlReaderFile implements HsReader{
 
     @Override
     public String read(Path arq) {
@@ -46,7 +46,7 @@ public class HsXHtmlReaderFile implements HsReader{
             }
             content = content.trim();
         } catch (IOException ex) {
-            System.err.println("readFile::HsReadFile: \n" + ex.getMessage());
+            System.err.println("readFile::HsReadFile: " + ex.getMessage());
         } finally {
             try {
                 if (fis != null) {

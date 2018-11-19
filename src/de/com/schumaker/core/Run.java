@@ -11,7 +11,7 @@ import java.io.IOException;
 public class Run {
 
     public static void main(String... args) throws IOException {
-        Run.mongoDBSetUp();
+      //  Run.mongoDBSetUp();
         
         HsCrawler crawler = new HsCrawler();
         crawler.doScan();
@@ -19,7 +19,7 @@ public class Run {
         
         
         
-        Run.mongoDBTeardown();        
+      //  Run.mongoDBTeardown();        
     }
     
     private static void mongoDBSetUp(){

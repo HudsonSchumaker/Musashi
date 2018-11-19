@@ -37,16 +37,24 @@ public class HsUtil {
             buffer.append(".");
             buffer.append(String.valueOf(bytes).substring(2, 3));
         }
-        if (digits == 0) {
-            buffer.append(" B");
-        } else if (digits == 1) {
-            buffer.append(" KB");
-        } else if (digits == 2) {
-            buffer.append(" MB");
-        } else if (digits == 3) {
-            buffer.append(" GB");
-        } else if (digits == 4) {
-            buffer.append(" TB");
+        switch (digits) {
+            case 0:
+                buffer.append(" B");
+                break;
+            case 1:
+                buffer.append(" KB");
+                break;
+            case 2:
+                buffer.append(" MB");
+                break;
+            case 3:
+                buffer.append(" GB");
+                break;
+            case 4:
+                buffer.append(" TB");
+                break;
+            default:
+                break;
         }
         return buffer.toString();
     }

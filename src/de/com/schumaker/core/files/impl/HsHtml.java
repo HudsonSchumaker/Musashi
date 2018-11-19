@@ -4,7 +4,7 @@ import java.nio.file.Path;
 import de.com.schumaker.core.files.HsFile;
 import de.com.schumaker.core.service.HsReadableService;
 import de.com.schumaker.core.files.HsReadable;
-import de.com.schumaker.core.reader.impl.HsXHtmlReaderFile;
+import de.com.schumaker.core.reader.impl.HsHtmlReaderFile;
 
 /**
  *
@@ -31,7 +31,7 @@ public class HsHtml extends HsFile implements HsReadable {
     
     @Override
     public String read() {
-        return new HsXHtmlReaderFile().read(getPath());
+        return new HsHtmlReaderFile().read(getPath());
     }
     
     @Override
