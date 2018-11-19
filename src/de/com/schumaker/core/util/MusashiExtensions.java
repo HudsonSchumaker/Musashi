@@ -2,7 +2,7 @@ package de.com.schumaker.core.util;
 
 /**
  *
- * @author hudsonschumaker
+ * @author hudson schumaker
  */
 public class MusashiExtensions {
     
@@ -19,7 +19,11 @@ public class MusashiExtensions {
     public static final String TXT   = "txt"; 
     public static final String RTF   = "rtf"; 
     public static final String DOC   = "doc"; 
-    public static final String DOCX  = "docx"; 
+    public static final String DOCX  = "docx";
+    public static final String XLS   = "xls";
+    public static final String XLSX  = "xlsx";
+    public static final String PPT   = "ppt";
+    public static final String PPTX  = "pptx";
     
     private MusashiExtensions(){
     }

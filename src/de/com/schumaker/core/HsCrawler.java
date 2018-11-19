@@ -22,14 +22,17 @@ public class HsCrawler {
         
       
         Files.walk(configFilePath)
-            .filter(p -> HsSupportedFiles.getInstance().isSupported(HsUtil.getFileExtension(p.toString())))
+            .filter(p -> HsSupportedFiles.getInstance()
+                    .isSupported(HsUtil.getFileExtension(p.toString())))
             .map(Path::normalize)
             .collect(toList())
             .parallelStream()
             .forEach(p -> HsSupportedFiles
                 .getInstance()
                 .getType(HsUtil.getFileExtension(p.toString()))
-                .newOne(p.normalize().toString(), p.getFileName().toString(), HsUtil.getFileExtension(p.toString()))
+                .newOne(p.normalize().toString(),
+                        p.getFileName().toString(),
+                        HsUtil.getFileExtension(p.toString()))
                 .process());
     }
 }

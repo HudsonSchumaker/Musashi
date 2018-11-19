@@ -1,9 +1,9 @@
 package de.com.schumaker.core.files.impl;
 
+import java.nio.file.Path;
 import de.com.schumaker.core.files.HsFile;
 import de.com.schumaker.core.reader.impl.HsBasicReaderFile;
 import de.com.schumaker.core.service.HsReadableService;
-import java.nio.file.Path;
 import de.com.schumaker.core.files.HsReadable;
 
 /**
