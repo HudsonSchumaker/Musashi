@@ -1,0 +1,46 @@
+
+//        Arquivo q = SupportedFiles.getInstance().getType("pdf").newOne("/Users/hudsonschumaker/Downloads/temp/Pdf/CARTA_SERVICO_CIDADAO.pdf");
+        Arquivo w = SupportedFiles.getInstance().getType("java").newOne("/Users/hudsonschumaker/Downloads/jms/src/br/com/caelum/jms/TesteProdutorTopico.java");
+
+        System.out.println(SupportedFiles.getInstance().isSupported("xhtml"));
+
+    
+           
+//            Files.list(Paths.get("/Users/hudsonschumaker/NetBeansProjects/Poo/src/br/com/schumaker/hudson/oo/heranca"))
+//                .filter(p -> SupportedFiles.getInstance().isSupported(HsUtil.getFileExtension(p.toString())))
+//                . 
+//                        p -> SupportedFiles.getInstance().getType(HsUtil.getFileExtension(p.toString())).newOne(p.toString()).read()
+//                );
+                 
+//Path configFilePath = Paths.get("/Volumes/Data2/Material de estudo/");
+Path configFilePath = Paths.get("/Users/hudsonschumaker/Downloads/");
+
+//Path configFilePath = Paths.get("/Volumes/Data2/Material de estudo/Livros/pdf");
+
+
+
+
+
+              Files.walk(configFilePath)
+                            .filter(p -> SupportedFiles.getInstance().isSupported(HsUtil.getFileExtension(p.toString())))
+                            .map(Path::normalize)
+                          //  .sorted()
+                            .collect(toList())
+                          //  .stream() //
+                            .parallelStream()
+                            .forEach(p -> SupportedFiles
+                                    .getInstance()
+                                    .getType(HsUtil.getFileExtension(p.toString()))
+                                    .newOne(p.normalize().toString(), p.getFileName().toString(), HsUtil.getFileExtension(p.toString()))
+                                    .read());
+              
+              
+                        
+                
+           
+        
+//        lista.forEach((arquivo) -> arquivo.read());
+//      for(Arquivo a : lista){
+//          a.read();
+//      }
+
