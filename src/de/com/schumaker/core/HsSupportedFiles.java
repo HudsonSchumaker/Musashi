@@ -30,15 +30,15 @@ public class HsSupportedFiles {
 //        SUPPORTED_FILES.put(MusashiExtensions.SHTML, new HsHtml());
 //        SUPPORTED_FILES.put(MusashiExtensions.XHTML, new HsHtml());
 //        
-        SUPPORTED_FILES.put(MusashiExtensions.TXT, new HsTxt());
+//        SUPPORTED_FILES.put(MusashiExtensions.TXT, new HsTxt());
         SUPPORTED_FILES.put(MusashiExtensions.CSV, new HsTxt());
-        SUPPORTED_FILES.put(MusashiExtensions.JSON, new HsTxt());
-        SUPPORTED_FILES.put(MusashiExtensions.XML, new HsTxt());
-        SUPPORTED_FILES.put(MusashiExtensions.JS,  new HsTxt());
-        SUPPORTED_FILES.put(MusashiExtensions.SH,  new HsTxt());
-        SUPPORTED_FILES.put(MusashiExtensions.CSS, new HsTxt());
-
-        SUPPORTED_FILES.put(MusashiExtensions.BAT, new HsTxt());
+//        SUPPORTED_FILES.put(MusashiExtensions.JSON, new HsTxt());
+//        SUPPORTED_FILES.put(MusashiExtensions.XML, new HsTxt());
+//        SUPPORTED_FILES.put(MusashiExtensions.JS,  new HsTxt());
+//        SUPPORTED_FILES.put(MusashiExtensions.SH,  new HsTxt());
+//        SUPPORTED_FILES.put(MusashiExtensions.CSS, new HsTxt());
+//
+//        SUPPORTED_FILES.put(MusashiExtensions.BAT, new HsTxt());
 //        SUPPORTED_FILES.put(MusashiExtensions.JSP, new HsTxt());
 //        SUPPORTED_FILES.put(MusashiExtensions.ASP, new HsTxt());
 //        SUPPORTED_FILES.put(MusashiExtensions.ASPX, new HsTxt());
@@ -52,12 +52,12 @@ public class HsSupportedFiles {
 //        SUPPORTED_FILES.put(MusashiExtensions.RUBY, new HsTxt());
 //        SUPPORTED_FILES.put(MusashiExtensions.COLDFUSION, new HsTxt());
 //
-        SUPPORTED_FILES.put(MusashiExtensions.RTF,  new HsRtf());
+//        SUPPORTED_FILES.put(MusashiExtensions.RTF,  new HsRtf());
 //        SUPPORTED_FILES.put(MusashiExtensions.PDF,  new HsPdf());
 //        SUPPORTED_FILES.put(MusashiExtensions.DOC,  new HsDoc());
 //        SUPPORTED_FILES.put(MusashiExtensions.DOCX, new HsDocx());
-//        SUPPORTED_FILES.put(MusashiExtensions.XLS,  new HsXls());
-//        SUPPORTED_FILES.put(MusashiExtensions.XLSX, new HsXlsx());
+        SUPPORTED_FILES.put(MusashiExtensions.XLS,  new HsXls());
+        SUPPORTED_FILES.put(MusashiExtensions.XLSX, new HsXlsx());
 //        SUPPORTED_FILES.put(MusashiExtensions.PPT,  new HsPpt());
 //        SUPPORTED_FILES.put(MusashiExtensions.PPTX, new HsPptx());
     }

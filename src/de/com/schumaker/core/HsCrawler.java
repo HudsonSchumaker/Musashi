@@ -18,8 +18,8 @@ public class HsCrawler {
         
         //Path configFilePath = Paths.get("/Users/hudsonschumaker/Downloads/t");
        
-        //Path configFilePath = Paths.get("/Users/hudsonschumaker/Documents");
-        Path configFilePath = Paths.get("//192.168.62.2/Troca");
+        Path configFilePath = Paths.get("/Users/hudsonschumaker/Documents");
+        //Path configFilePath = Paths.get("//192.168.62.2/Troca");
       
         Files.walk(configFilePath)
             .filter(p -> HsSupportedFiles.getInstance()

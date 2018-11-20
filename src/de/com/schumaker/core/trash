@@ -25,6 +25,11 @@ Path configFilePath = Paths.get("/Users/hudsonschumaker/Downloads/");
                                     .read());
               
               
-                        
+                   
+https://www.mkyong.com/mongodb/spring-data-mongodb-like-query-example/
+https://stackoverflow.com/questions/3305561/how-to-query-mongodb-with-like
+
+run ./mongod   
                 
-          
+    COLLECTION.updateOne(Filters.eq("nome", "Joao"),new Document("$set", new Document("nome", "Joao Silva")));
+    COLLECTION.deleteOne(Filters.eq("nome", "Joao Silva"));

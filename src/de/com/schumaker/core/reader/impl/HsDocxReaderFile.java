@@ -28,8 +28,8 @@ public class HsDocxReaderFile implements HsReader {
         try {
             fis = new FileInputStream(file.getAbsolutePath());
             XWPFDocument document = new XWPFDocument(fis);
-           //List<XWPFParagraph> paragraphs = document.getParagraphs();
-           List<XWPFParagraph> paragraphs = Arrays.asList(document.getParagraphs());
+            List<XWPFParagraph> paragraphs = document.getParagraphs();
+            //List<XWPFParagraph> paragraphs = Arrays.asList(document.getParagraphs());
             for (XWPFParagraph para : paragraphs) {
                 if (para.getText().trim().length() > 10) {
                     strBuilder.append(para.getText().trim());
