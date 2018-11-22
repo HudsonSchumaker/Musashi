@@ -1,6 +1,7 @@
 package de.com.schumaker.core.reader.impl;
 
 import de.com.schumaker.core.reader.HsReader;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.file.Path;
 import org.apache.pdfbox.pdmodel.PDDocument;
