@@ -8,45 +8,52 @@ import java.nio.file.Path;
 import org.apache.poi.hwpf.HWPFDocument;
 import org.apache.poi.hwpf.extractor.WordExtractor;
 
-
 /**
  *
  * @author hudson schumaker
  */
-public class HsDocReaderFile implements HsReader{
+public class HsDocReaderFile implements HsReader {
 
     @Override
     public String read(Path arq) {
         return readDocFile(arq.normalize().toString());
     }
-    
-    private String readDocFile(String filePath){
-        File file = new File(filePath);
+
+    private String readDocFile(String filePath) {
         StringBuilder strBuilder = new StringBuilder();
+        File file = new File(filePath);
         FileInputStream fis = null;
+        HWPFDocument doc = null;
+        WordExtractor extractor = null;
         try {
             fis = new FileInputStream(file.getAbsolutePath());
-            HWPFDocument doc = new HWPFDocument(fis);
-            WordExtractor extractor = new WordExtractor(doc);
+            doc = new HWPFDocument(fis);
+            extractor = new WordExtractor(doc);
             for (String rawText : extractor.getParagraphText()) {
                 String text = WordExtractor.stripFields(rawText);
                 if (text.length() > 10) {
                     strBuilder.append(text.trim());
                 }
             }
-        } catch (IOException ex) {
-            System.err.println("readWordFile::HsDocFile: " + ex.getMessage());
+        } catch (IOException ex) { 
+            System.err.println("HsDocReaderFile.readDocFile: IOException " + filePath + "\n" + ex.getMessage());
+        } catch (IllegalArgumentException ex) {
+            System.err.println("HsDocReaderFile.readDocFile: IllegalArgumentException " + filePath + "\n" + ex.getMessage());
         } finally {
             try {
                 if (fis != null) {
                     fis.close();
                 }
+                if (doc != null) {
+                    doc.close();
+                }
+                if (extractor != null) {
+                    extractor.close();
+                }
             } catch (IOException ex) {
-                System.err.println("readWordFile::HsDocFile: " + ex.getMessage());
+                System.err.println("HsDocReaderFile.readDocFile: IOException " + filePath + "\n" + ex.getMessage());
             }
         }
-        file = null;
-        String content = strBuilder.toString();
-        return content;
+        return strBuilder.toString();
     }
 }
