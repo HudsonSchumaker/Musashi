@@ -24,6 +24,6 @@ public class HsRecordFileDAOImpl implements HsRecordFileDAO{
     
     public void Search(){
         FindIterable<Document> doc = HsConnectionFactory.getInstance().getCollection().find(Filters.eq("Name","Wii_Mario_Kart.pdf"));
-        int x =0; 
+        int x = 0; 
     }
 }

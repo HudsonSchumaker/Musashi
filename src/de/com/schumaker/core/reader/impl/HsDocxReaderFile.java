@@ -3,6 +3,7 @@ package de.com.schumaker.core.reader.impl;
 import de.com.schumaker.core.reader.HsReader;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 
 import java.nio.file.Path;
@@ -37,7 +38,6 @@ public class HsDocxReaderFile implements HsReader {
             }
         } catch (IOException ex) { 
             System.err.println("HsDocxReaderFile.readDocxFile: IOException " + filePath + "\n" + ex.getMessage());
-           
         } catch (IllegalArgumentException ex) {
             System.err.println("HsDocxReaderFile.readDocxFile: IllegalArgumentException " + filePath + "\n" + ex.getMessage());
         } finally {
