@@ -8,6 +8,7 @@ import java.io.IOException;
 
 import java.nio.file.Path;
 import java.util.List;
+import org.apache.poi.EncryptedDocumentException;
 import org.apache.poi.xwpf.usermodel.XWPFDocument;
 import org.apache.poi.xwpf.usermodel.XWPFParagraph;
 
@@ -40,6 +41,8 @@ public class HsDocxReaderFile implements HsReader {
             System.err.println("HsDocxReaderFile.readDocxFile: IOException " + filePath + "\n" + ex.getMessage());
         } catch (IllegalArgumentException ex) {
             System.err.println("HsDocxReaderFile.readDocxFile: IllegalArgumentException " + filePath + "\n" + ex.getMessage());
+        } catch (EncryptedDocumentException ex){
+            System.err.println("HsDocxReaderFile.readDocxFile: EncryptedDocumentException " + filePath + "\n" + ex.getMessage());
         } finally {
             try {
                 if (fis != null) {
