@@ -6,6 +6,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.file.Path;
+import org.apache.poi.EncryptedDocumentException;
 import org.apache.poi.hwpf.HWPFDocument;
 import org.apache.poi.hwpf.extractor.WordExtractor;
 
@@ -40,6 +41,8 @@ public class HsDocReaderFile implements HsReader {
             System.err.println("HsDocReaderFile.readDocFile: IOException " + filePath + "\n" + ex.getMessage());
         } catch (IllegalArgumentException ex) {
             System.err.println("HsDocReaderFile.readDocFile: IllegalArgumentException " + filePath + "\n" + ex.getMessage());
+        } catch (EncryptedDocumentException ex){
+            System.err.println("HsDocReaderFile.readDocFile: EncryptedDocumentException " + filePath + "\n" + ex.getMessage());
         } finally {
             try {
                 if (fis != null) {
