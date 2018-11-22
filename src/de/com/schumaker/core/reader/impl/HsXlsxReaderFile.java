@@ -27,8 +27,8 @@ public class HsXlsxReaderFile implements HsReader{
     }
     
     private String readXlsxFile(String filePath){
-        File file = new File(filePath);
         StringBuilder strBuilder = new StringBuilder();
+        File file = new File(filePath);
         FileInputStream fis = null;
         XSSFWorkbook workbook = null;
         try {

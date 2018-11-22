@@ -54,10 +54,10 @@ public class HsSupportedFiles {
 //
 //        SUPPORTED_FILES.put(MusashiExtensions.RTF,  new HsRtf());
 //        SUPPORTED_FILES.put(MusashiExtensions.PDF,  new HsPdf());
-        SUPPORTED_FILES.put(MusashiExtensions.DOC,  new HsDoc());
-        SUPPORTED_FILES.put(MusashiExtensions.DOCX, new HsDocx());
-        SUPPORTED_FILES.put(MusashiExtensions.XLS,  new HsXls());
-        SUPPORTED_FILES.put(MusashiExtensions.XLSX, new HsXlsx());
+//        SUPPORTED_FILES.put(MusashiExtensions.DOC,  new HsDoc());
+//        SUPPORTED_FILES.put(MusashiExtensions.DOCX, new HsDocx());
+//        SUPPORTED_FILES.put(MusashiExtensions.XLS,  new HsXls());
+//        SUPPORTED_FILES.put(MusashiExtensions.XLSX, new HsXlsx());
         SUPPORTED_FILES.put(MusashiExtensions.PPT,  new HsPpt());
         SUPPORTED_FILES.put(MusashiExtensions.PPTX, new HsPptx());
     }

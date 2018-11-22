@@ -3,7 +3,6 @@ package de.com.schumaker.core.reader.impl;
 import de.com.schumaker.core.reader.HsReader;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 
 import java.nio.file.Path;
@@ -24,7 +23,7 @@ public class HsDocxReaderFile implements HsReader {
     }
 
     private String readDocxFile(String filePath) {
-  StringBuilder strBuilder = new StringBuilder();
+        StringBuilder strBuilder = new StringBuilder();
         File file = new File(filePath);
         FileInputStream fis = null;
         XWPFDocument doc = null;

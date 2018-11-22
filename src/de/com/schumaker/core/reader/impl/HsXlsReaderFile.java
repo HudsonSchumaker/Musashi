@@ -26,8 +26,8 @@ public class HsXlsReaderFile implements HsReader{
     }
     
     private String readXlsFile(String filePath){
-        File file = new File(filePath);
         StringBuilder strBuilder = new StringBuilder();
+        File file = new File(filePath);
         FileInputStream fis = null;
         HSSFWorkbook workbook = null;
         try {
