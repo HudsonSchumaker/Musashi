@@ -19,7 +19,8 @@ public class HsCrawler {
         //Path configFilePath = Paths.get("/Users/hudsonschumaker/Downloads/t");
         // Path configFilePath = Paths.get("/Users/hudsonschumaker/Documents");
         //Path configFilePath = Paths.get("//192.168.62.2/Troca");
-        Path configFilePath = Paths.get("/Users/hudsonschumaker/Downloads/musashi");
+       //Path configFilePath = Paths.get("/Users/hudsonschumaker/Downloads/musashi");
+       Path configFilePath = Paths.get("/Volumes/Data2/Material de estudo");
         
       
         Files.walk(configFilePath)

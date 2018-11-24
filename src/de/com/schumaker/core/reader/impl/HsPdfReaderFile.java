@@ -29,7 +29,9 @@ public class HsPdfReaderFile implements HsReader{
                 Tstripper = null; // Não remover
             }
         } catch (IOException ex) {
-            System.err.println("readerPdfFile::HsReadPdfFile: " + ex.getMessage());
+            System.err.println("HsPdfReaderFile.readPdfFile: IOException " + ex.getMessage());
+        } catch (RuntimeException ex){
+            System.err.println("HsPdfReaderFile.readPdfFile: RuntimeException " + filePath + "\n" + ex.getMessage());
         } finally {
             try {
                 if (document != null) {

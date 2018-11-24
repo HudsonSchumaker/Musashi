@@ -45,7 +45,7 @@ public class HsHtmlReaderFile implements HsReader{
                 content = "";
             }
             content = content.trim();
-        } catch (IOException ex) {
+        } catch (IOException | RuntimeException ex) {
             System.err.println("readFile::HsReadFile: " + ex.getMessage());
         } finally {
             try {

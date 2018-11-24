@@ -57,6 +57,8 @@ public class HsXlsxReaderFile implements HsReader{
             System.err.println("HsXlsxReaderFile.readXlsFxile: IOException " + filePath + "\n" + ex.getMessage());
         } catch (EncryptedDocumentException ex){
             System.err.println("HsXlsxReaderFile.readXlsxFile: EncryptedDocumentException " + filePath + "\n" + ex.getMessage());
+        } catch (RuntimeException ex){
+            System.err.println("HsXlsxReaderFile.readXlsxFile: RuntimeException " + filePath + "\n" + ex.getMessage());
         } finally {
             try {
                 if (fis != null) {

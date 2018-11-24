@@ -16,7 +16,7 @@ public class HsBasicReaderFile implements HsReader{
         byte [] buffer = null;
         try {
             buffer = Files.readAllBytes(arq);
-        } catch (IOException e) {
+        } catch (IOException | RuntimeException e) {
             System.err.println(e);
         }
         return new String(buffer);

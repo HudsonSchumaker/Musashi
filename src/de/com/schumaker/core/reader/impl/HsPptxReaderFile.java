@@ -54,6 +54,8 @@ public class HsPptxReaderFile implements HsReader{
             System.err.println("HsPptxReaderFile.readPptxFile: IOException " + filePath + "\n" + ex.getMessage());
         } catch (EncryptedDocumentException ex){
             System.err.println("HsPptxReaderFile.readPptxFile: EncryptedDocumentException " + filePath + "\n" + ex.getMessage());
+        } catch (RuntimeException ex){
+            System.err.println("HsPptxReaderFile.readPptxFile: RuntimeException " + filePath + "\n" + ex.getMessage());
         } finally {
             try {
                 if (fis != null) {

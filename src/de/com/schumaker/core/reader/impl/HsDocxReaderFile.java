@@ -42,7 +42,9 @@ public class HsDocxReaderFile implements HsReader {
             System.err.println("HsDocxReaderFile.readDocxFile: IllegalArgumentException " + filePath + "\n" + ex.getMessage());
         } catch (EncryptedDocumentException ex){
             System.err.println("HsDocxReaderFile.readDocxFile: EncryptedDocumentException " + filePath + "\n" + ex.getMessage());
-        } finally {
+        } catch (RuntimeException ex){
+            System.err.println("HsDocxReaderFile.readDocxFile: RuntimeException " + filePath + "\n" + ex.getMessage());
+        }  finally {
             try {
                 if (fis != null) {
                     fis.close();

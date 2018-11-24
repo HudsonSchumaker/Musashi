@@ -33,7 +33,7 @@ public class HsRtfReaderFile implements HsReader{
             strBuilder.append(doc.getText(0, doc.getLength()));
         } catch (FileNotFoundException ex) {
             System.err.println("readRtfFile::HsReaderRtf: " + ex.getMessage());
-        } catch ( IOException | BadLocationException ex) {
+        } catch ( IOException | BadLocationException | RuntimeException ex) {
             System.err.println("readRtfFile::HsReaderRtf: " + ex.getMessage());
         } finally {
             try {
