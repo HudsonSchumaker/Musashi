@@ -2,7 +2,7 @@ package de.com.schumaker.core.util;
 
 /**
  *
- * @author hudson schumaker
+ * @author Hudson Schumaker
  */
 public class MusashiExtensions {
     
