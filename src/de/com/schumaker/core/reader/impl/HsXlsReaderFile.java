@@ -18,7 +18,7 @@ import org.apache.poi.ss.usermodel.Row;
  *
  * @author hudson schumaker
  */
-public class HsXlsReaderFile implements HsReader{
+public class HsXlsReaderFile implements HsReader {
 
     @Override
     public String read(Path arq) {
