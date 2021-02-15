@@ -11,7 +11,7 @@ import org.apache.poi.hwpf.extractor.WordExtractor;
 
 /**
  *
- * @author hudson schumaker
+ * @author Hudson Schumaker
  */
 public class HsDocReaderFile implements HsReader {
 
