@@ -7,9 +7,9 @@ import java.nio.file.Path;
 
 /**
  *
- * @author hudson schumaker
+ * @author Hudson Schumaker
  */
-public class HsBasicReaderFile implements HsReader{
+public class HsBasicReaderFile implements HsReader {
 
     @Override
     public String read(Path arq) {
