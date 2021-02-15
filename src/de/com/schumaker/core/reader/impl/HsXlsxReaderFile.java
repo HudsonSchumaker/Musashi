@@ -19,7 +19,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
  *
  * @author hudson schumaker
  */
-public class HsXlsxReaderFile implements HsReader{
+public class HsXlsxReaderFile implements HsReader {
 
     @Override
     public String read(Path arq) {
