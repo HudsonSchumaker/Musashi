@@ -4,7 +4,7 @@ import org.bson.Document;
 
 /**
  *
- * @author hudson schumaker
+ * @author Hudson Schumaker
  */
 public interface HsRecordFileDAO {
     void Salvar(Document doc);
