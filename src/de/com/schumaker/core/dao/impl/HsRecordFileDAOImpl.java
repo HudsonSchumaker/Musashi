@@ -8,7 +8,7 @@ import com.mongodb.client.model.Filters;
 
 /**
  *
- * @author hudson schumaker
+ * @author Hudson Schumaker
  */
 public class HsRecordFileDAOImpl implements HsRecordFileDAO{
 
