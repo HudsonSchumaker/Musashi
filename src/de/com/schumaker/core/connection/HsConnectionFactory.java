@@ -7,7 +7,7 @@ import org.bson.Document;
 
 /**
  *
- * @author hudson schumaker
+ * @author Hudson Schumaker
  */
 public class HsConnectionFactory {
     
