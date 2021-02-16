@@ -14,10 +14,7 @@ public class Run {
       //  Run.mongoDBSetUp();
         
         HsCrawler crawler = new HsCrawler();
-        crawler.doScan();
-        
-        
-        
+        crawler.doScan();        
         
       //  Run.mongoDBTeardown();        
     }
