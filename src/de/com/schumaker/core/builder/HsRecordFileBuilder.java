@@ -5,7 +5,7 @@ import java.nio.file.Path;
 import org.bson.Document;
 /**
  *
- * @author hudson schumaker
+ * @author Hudson Schumaker
  */
 public class HsRecordFileBuilder {
     
