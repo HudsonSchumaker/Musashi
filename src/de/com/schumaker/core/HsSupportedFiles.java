@@ -16,7 +16,7 @@ import java.util.HashMap;
 
 /**
  *
- * @author hudson schumaker
+ * @author Hudson Schumaker
  */
 public class HsSupportedFiles {
 
