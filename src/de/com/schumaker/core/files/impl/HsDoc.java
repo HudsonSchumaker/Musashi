@@ -8,7 +8,7 @@ import de.com.schumaker.core.reader.impl.HsDocReaderFile;
 
 /**
  *
- * @author hudson schumaker
+ * @author Hudson Schumaker
  */
 public class HsDoc extends HsFile implements HsReadable {
     
