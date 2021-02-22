@@ -8,7 +8,7 @@ import de.com.schumaker.core.reader.impl.HsPdfReaderFile;
 
 /**
  *
- * @author hudson schumaker
+ * @author Hudson Schumaker
  */
 public class HsPdf extends HsFile implements HsReadable {
     
