@@ -8,7 +8,7 @@ import de.com.schumaker.core.reader.impl.HsHtmlReaderFile;
 
 /**
  *
- * @author hudson schumaker
+ * @author Hudson Schumaker
  */
 public class HsHtml extends HsFile implements HsReadable {
     
