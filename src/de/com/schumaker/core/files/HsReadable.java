@@ -4,7 +4,7 @@ import java.nio.file.Path;
 
 /**
  *
- * @author hudson schumaker
+ * @author Hudson Schumaker
  */
 public interface HsReadable { 
     void process();
