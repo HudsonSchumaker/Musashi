@@ -13,7 +13,7 @@ import org.apache.poi.xwpf.usermodel.XWPFParagraph;
 
 /**
  *
- * @author hudson schumaker
+ * @author Hudson Schumaker
  */
 public class HsDocxReaderFile implements HsReader {
 
