@@ -12,7 +12,7 @@ import javax.swing.text.rtf.RTFEditorKit;
 
 /**
  *
- * @author hudson schumaker
+ * @author Hudson Schumaker
  */
 public class HsRtfReaderFile implements HsReader{
 
