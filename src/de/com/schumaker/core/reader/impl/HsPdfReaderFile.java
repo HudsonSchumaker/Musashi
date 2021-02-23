@@ -9,7 +9,7 @@ import org.apache.pdfbox.util.PDFTextStripper;
 
 /**
  *
- * @author hudson schumaker
+ * @author Hudson Schumaker
  */
 public class HsPdfReaderFile implements HsReader{
 
