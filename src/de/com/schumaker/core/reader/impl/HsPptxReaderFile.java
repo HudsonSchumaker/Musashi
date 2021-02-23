@@ -16,7 +16,7 @@ import org.apache.poi.xslf.usermodel.XSLFTextShape;
 
 /**
  *
- * @author hudson schumaker
+ * @author Hudson Schumaker
  */
 public class HsPptxReaderFile implements HsReader{
 
