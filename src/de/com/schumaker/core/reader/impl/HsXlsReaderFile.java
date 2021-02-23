@@ -16,7 +16,7 @@ import org.apache.poi.ss.usermodel.Row;
 
 /**
  *
- * @author hudson schumaker
+ * @author Hudson Schumaker
  */
 public class HsXlsReaderFile implements HsReader {
 
