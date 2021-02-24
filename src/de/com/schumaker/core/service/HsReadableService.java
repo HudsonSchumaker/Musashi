@@ -6,7 +6,7 @@ import de.com.schumaker.core.files.HsFile;
 
 /**
  *
- * @author hudson schumaker
+ * @author Hudson Schumaker
  */
 public class HsReadableService {
     
