@@ -2,6 +2,10 @@ package br.com.schumaker.musashi.crawler.service;
 
 import java.lang.Thread.UncaughtExceptionHandler;
 
+/**
+ *
+ * @author Hudson Schumker
+ */
 public class MsExceptionHandler implements UncaughtExceptionHandler {
 
     @Override

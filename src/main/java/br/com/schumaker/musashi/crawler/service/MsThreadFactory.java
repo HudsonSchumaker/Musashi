@@ -4,6 +4,10 @@ import org.springframework.stereotype.Component;
 
 import java.util.concurrent.ThreadFactory;
 
+/**
+ *
+ * @author Hudson Schumker
+ */
 @Component
 public class MsThreadFactory implements ThreadFactory {
 
