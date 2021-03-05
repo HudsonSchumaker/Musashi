@@ -6,7 +6,7 @@ import java.util.concurrent.ThreadFactory;
 
 /**
  *
- * @author Hudson Schumker
+ * @author Hudson Schumaker
  */
 @Component
 public class MsThreadFactory implements ThreadFactory {

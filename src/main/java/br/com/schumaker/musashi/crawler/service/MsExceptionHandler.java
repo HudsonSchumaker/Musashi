@@ -4,7 +4,7 @@ import java.lang.Thread.UncaughtExceptionHandler;
 
 /**
  *
- * @author Hudson Schumker
+ * @author Hudson Schumaker
  */
 public class MsExceptionHandler implements UncaughtExceptionHandler {
 
