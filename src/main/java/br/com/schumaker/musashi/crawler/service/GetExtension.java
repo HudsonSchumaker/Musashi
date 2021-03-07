@@ -18,4 +18,15 @@ public class GetExtension {
         }
         return extension;
     }
+
+    public static String getExt(File f) {
+        String extension = "";
+        String fileName = f.getName();
+        String []extensions = fileName.split("\\.");
+        int i = extensions.length;
+        if (i > 1) {
+            extension = extensions[i - 1];
+        }
+        return extension;
+    }
 }

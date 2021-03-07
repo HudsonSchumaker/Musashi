@@ -1,19 +1,22 @@
 package br.com.schumaker.musashi.crawler.model.db;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
+import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.index.Indexed;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 @Data
-@NoArgsConstructor
-@AllArgsConstructor
+@Document
 public class MsDbFile {
 
     @Id
-    private String id;
+    private ObjectId id;
+
+    @Indexed(unique = true)
     private String name;
     private String ext;
+    @Indexed(unique = true)
     private String path;
     private String content;
 }
