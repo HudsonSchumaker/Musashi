@@ -2,11 +2,13 @@ package br.com.schumaker.musashi.crawler.model.readers.impl;
 
 import br.com.schumaker.musashi.crawler.model.readers.MsReader;
 import org.apache.poi.hslf.extractor.QuickButCruddyTextExtractor;
+import org.springframework.stereotype.Component;
 
 import java.io.File;
 import java.io.FileInputStream;
 
-public class MsPptReaderFile implements MsReader{
+@Component
+public class MsPptReaderFile implements MsReader {
 
     @Override
     public String read(String filePath) {

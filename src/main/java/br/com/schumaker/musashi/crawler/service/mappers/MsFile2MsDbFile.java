@@ -17,6 +17,7 @@ public class MsFile2MsDbFile implements Mapper<MsFile, MsDbFile> {
     @Override
     public void map(MsFile source, MsDbFile target) {
         target.setName(source.getName());
+        target.setPath(source.getPath());
         target.setContent(source.getContent());
         target.setExt(source.getExt());
     }

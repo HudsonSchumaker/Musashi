@@ -1,18 +1,19 @@
 package br.com.schumaker.musashi.crawler.model.readers.impl;
 
 import br.com.schumaker.musashi.crawler.model.readers.MsReader;
-import org.apache.poi.hslf.extractor.QuickButCruddyTextExtractor;
 import org.apache.poi.ooxml.POIXMLProperties;
 import org.apache.poi.xslf.usermodel.XMLSlideShow;
 import org.apache.poi.xslf.usermodel.XSLFShape;
 import org.apache.poi.xslf.usermodel.XSLFSlide;
 import org.apache.poi.xslf.usermodel.XSLFTextShape;
+import org.springframework.stereotype.Component;
 
 import java.io.File;
 import java.io.FileInputStream;
 import java.util.List;
 
-public class MsPptxReaderFile implements MsReader{
+@Component
+public class MsPptxReaderFile implements MsReader {
 
     @Override
     public String read(String filePath) {

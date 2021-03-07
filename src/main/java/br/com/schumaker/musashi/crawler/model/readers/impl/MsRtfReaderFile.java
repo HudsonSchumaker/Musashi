@@ -1,6 +1,7 @@
 package br.com.schumaker.musashi.crawler.model.readers.impl;
 
 import br.com.schumaker.musashi.crawler.model.readers.MsReader;
+import org.springframework.stereotype.Component;
 
 import javax.swing.text.Document;
 import javax.swing.text.rtf.RTFEditorKit;
@@ -8,6 +9,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 
+@Component
 public class MsRtfReaderFile implements MsReader {
 
     @Override
