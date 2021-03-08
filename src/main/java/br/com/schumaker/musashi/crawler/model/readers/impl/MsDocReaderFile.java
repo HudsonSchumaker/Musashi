@@ -54,6 +54,6 @@ public class MsDocReaderFile implements MsReader {
                 System.err.println("HsDocReaderFile.readDocFile: Exception " + filePath + "\n" + ex.getMessage());
             }
         }
-        return strBuilder.toString();
+        return strBuilder.toString().trim();
     }
 }
