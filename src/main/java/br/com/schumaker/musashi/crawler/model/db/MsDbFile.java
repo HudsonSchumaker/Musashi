@@ -6,6 +6,10 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+/**
+ *
+ * @author Hudson Schumaker
+ */
 @Data
 @Document
 public class MsDbFile {
