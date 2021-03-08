@@ -22,6 +22,6 @@ public class MsBasicReaderFile implements MsReader {
         } catch (IOException | RuntimeException e) {
             System.err.println(e);
         }
-        return buffer == null ? "" : new String(buffer);
+        return buffer == null ? "" : new String(buffer).trim();
     }
 }
