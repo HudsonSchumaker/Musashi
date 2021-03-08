@@ -3,16 +3,12 @@ package br.com.schumaker.musashi.crawler.model.files;
 import br.com.schumaker.musashi.crawler.model.MsFile;
 import br.com.schumaker.musashi.crawler.model.MsReadable;
 import br.com.schumaker.musashi.crawler.model.readers.impl.MsPptxReaderFile;
-import org.springframework.beans.factory.annotation.Autowired;
 
 /**
  *
  * @author Hudson Schumaker
  */
 public class MsPptx extends MsFile implements MsReadable {
-
-    @Autowired
-    private MsPptxReaderFile reader;
 
     public MsPptx() {}
 
@@ -21,13 +17,14 @@ public class MsPptx extends MsFile implements MsReadable {
     }
 
     @Override
-    public void process() {
+    public MsFile process() {
         super.setContent(read());
+        return this;
     }
 
     @Override
     public String read() {
-        return reader.read(getPath());
+        return new MsPptxReaderFile().read(getPath());
     }
 
     @Override
