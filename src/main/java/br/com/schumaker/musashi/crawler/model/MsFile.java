@@ -2,7 +2,6 @@ package br.com.schumaker.musashi.crawler.model;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.AllArgsConstructor;
 
 /**
  *
@@ -10,7 +9,6 @@ import lombok.AllArgsConstructor;
  */
 @Data
 @NoArgsConstructor
-@AllArgsConstructor
 public abstract class MsFile {
 
     private String name;
