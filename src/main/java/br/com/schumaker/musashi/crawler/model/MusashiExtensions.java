@@ -14,8 +14,11 @@ public class MusashiExtensions {
     public static final String JSP    = "jsp";
     public static final String ASP    = "asp";
     public static final String ASPX   = "aspx";
-    public static final String SQL   = "sql";
+    public static final String SQL    = "sql";
     public static final String C      = "c";
+    public static final String H      = "h";
+    public static final String S      = "s";
+    public static final String ASM    = "asm";
     public static final String CS     = "cs";
     public static final String CPP    = "cpp";
     public static final String PHP    = "php";
@@ -35,6 +38,7 @@ public class MusashiExtensions {
 
     public static final String CSV  = "csv";
     public static final String XML  = "xml";
+    public static final String IML  = "iml";
     public static final String JSON = "json";
     public static final String RTF  = "rtf";
     public static final String PDF  = "pdf";
