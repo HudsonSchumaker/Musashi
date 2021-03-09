@@ -40,6 +40,6 @@ public class MsPdfReaderFile implements MsReader {
                 System.err.println("readerPdfFile::HsReadPdfFile: " + ex.getMessage());
             }
         }
-        return content;
+        return content.trim();
     }
 }
