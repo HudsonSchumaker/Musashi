@@ -9,6 +9,10 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 
+/**
+ *
+ * @author Hudson Schumaker
+ */
 @Component
 public class MsRtfReaderFile implements MsReader {
 
@@ -38,6 +42,6 @@ public class MsRtfReaderFile implements MsReader {
                 System.err.println("readRtfFile::HsReaderRtf: " + ex.getMessage());
             }
         }
-        return strBuilder.toString();
+        return strBuilder.toString().trim();
     }
 }
