@@ -23,4 +23,5 @@ public class MsDbFile {
     @Indexed(unique = true)
     private String path;
     private String content;
+    private long rank;
 }
