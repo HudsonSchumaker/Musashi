@@ -50,6 +50,12 @@ public class MsSupportedFile {
         SUPPORTED_FILES.put(MusashiExtensions.PPTX, new MsPptx());
         SUPPORTED_FILES.put(MusashiExtensions.PDF, new MsPdf());
 
+        SUPPORTED_FILES.put(MusashiExtensions.HTM,   new MsHtml());
+        SUPPORTED_FILES.put(MusashiExtensions.HTML,  new MsHtml());
+        SUPPORTED_FILES.put(MusashiExtensions.DHTML, new MsHtml());
+        SUPPORTED_FILES.put(MusashiExtensions.JHTML, new MsHtml());
+        SUPPORTED_FILES.put(MusashiExtensions.SHTML, new MsHtml());
+        SUPPORTED_FILES.put(MusashiExtensions.XHTML, new MsHtml());
     }
 
     private MsSupportedFile() {}
