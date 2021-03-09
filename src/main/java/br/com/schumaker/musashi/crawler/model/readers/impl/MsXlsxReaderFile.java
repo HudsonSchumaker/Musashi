@@ -72,6 +72,6 @@ public class MsXlsxReaderFile implements MsReader {
                 System.err.println("HsXlsxReaderFile.readXlsxFile: Exception " + filePath + "\n" + ex.getMessage());
             }
         }
-        return strBuilder.toString();
+        return strBuilder.toString().trim();
     }
 }
