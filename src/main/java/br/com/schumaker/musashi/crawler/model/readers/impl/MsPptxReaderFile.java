@@ -12,6 +12,10 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.util.List;
 
+/**
+ *
+ * @author Hudson Schumaker
+ */
 @Component
 public class MsPptxReaderFile implements MsReader {
 
@@ -55,6 +59,6 @@ public class MsPptxReaderFile implements MsReader {
                 System.err.println("HsPptxReaderFile.readPptxFile: Exception " + filePath + "\n" + ex.getMessage());
             }
         }
-        return strBuilder.toString();
+        return strBuilder.toString().trim();
     }
 }
