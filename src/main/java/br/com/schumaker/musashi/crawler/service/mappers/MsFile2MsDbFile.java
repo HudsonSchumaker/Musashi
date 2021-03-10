@@ -4,6 +4,10 @@ import br.com.schumaker.musashi.crawler.model.MsFile;
 import br.com.schumaker.musashi.crawler.model.db.MsDbFile;
 import org.springframework.stereotype.Component;
 
+/**
+ *
+ * @author Hudson Schumaker
+ */
 @Component
 public class MsFile2MsDbFile implements Mapper<MsFile, MsDbFile> {
 
@@ -20,5 +24,6 @@ public class MsFile2MsDbFile implements Mapper<MsFile, MsDbFile> {
         target.setPath(source.getPath());
         target.setContent(source.getContent());
         target.setExt(source.getExt());
+        target.setRank(0L);
     }
 }
