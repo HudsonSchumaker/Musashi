@@ -4,6 +4,7 @@ import br.com.schumaker.musashi.crawler.model.MsFile;
 import br.com.schumaker.musashi.crawler.model.MsSupportedFile;
 import br.com.schumaker.musashi.crawler.model.db.MsDbFile;
 import br.com.schumaker.musashi.crawler.model.db.repositories.MsDbFileRepository;
+import br.com.schumaker.musashi.crawler.model.files.MsVoid;
 import br.com.schumaker.musashi.crawler.service.mappers.MsFile2MsDbFile;
 import lombok.NoArgsConstructor;
 import org.springframework.stereotype.Component;
@@ -20,12 +21,12 @@ import java.util.concurrent.ExecutorService;
 public class Crawler implements Runnable {
 
     private String root;
-    private ExecutorService threadPool;
+    private ExecutorService filePool;
     private MsDbFileRepository repository;
 
-    public Crawler(String root, ExecutorService threadPool, MsDbFileRepository repository) {
+    public Crawler(String root, ExecutorService filePool, MsDbFileRepository repository) {
         this.root = root;
-        this.threadPool = threadPool;
+        this.filePool = filePool;
         this.repository = repository;
     }
 
@@ -42,21 +43,22 @@ public class Crawler implements Runnable {
                     if (f.isDirectory()) {
                         crawlFiles(f);
                     } else {
-                        Crawler c = new Crawler(f.getAbsolutePath(), threadPool, repository);
-                        threadPool.execute(c);
+                        Crawler c = new Crawler(f.getAbsolutePath(), filePool, repository);
+                        filePool.execute(c);
                     }
                 }
             } else {
                 if ((file.length() / 1024) / 1024 > 50) {
-                       System.out.println(file.getName() + " > que 8mb " + (file.length() / 1024) / 1024);
+                    System.out.println(file.getName() + " > que 8mb " + (file.length() / 1024) / 1024);
                 } else {
                     String ext = GetExtension.getExt(file);
                     if (MsSupportedFile.getInstance().isSupported(ext)) {
-
-                        MsFile r = MsSupportedFile.getInstance().getType(ext)
+                        MsFile msFile = MsSupportedFile.getInstance().getType(ext)
                                 .newOne(file.getAbsolutePath(), file.getName(), ext).process();
-
-                       repository.save(map(r));
+                        repository.save(map(msFile));
+                    } else {
+                        MsFile msFile = new MsVoid().newOne(file.getAbsolutePath(), file.getName(), ext).process();
+                        repository.save(map(msFile));
                     }
                 }
             }
