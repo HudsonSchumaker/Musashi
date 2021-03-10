@@ -23,7 +23,7 @@ public class MsCrawlerServiceImpl implements MsCrawlerService {
 
     public MsCrawlerServiceImpl() {
         this.directories = Executors.newFixedThreadPool(256, new MsThreadFactory());
-        this.files = Executors.newFixedThreadPool(64, new MsThreadFactory());
+        this.files = Executors.newFixedThreadPool(128, new MsReaderThreadFactory());
     }
 
     @Override
@@ -32,12 +32,14 @@ public class MsCrawlerServiceImpl implements MsCrawlerService {
         File []roots = file.listFiles();
 
         for (File f : roots) {
-            if (f.isDirectory()) {
-                Crawler c = new Crawler(f.getAbsolutePath(), files, repository);
-                this.directories.execute(c);
-            } else {
-                Crawler c = new Crawler(f.getAbsolutePath(), files, repository);
-                this.files.execute(c);
+            if(!f.isHidden()) {
+                if (f.isDirectory()) {
+                    Crawler c = new Crawler(f.getAbsolutePath(), files, repository);
+                    this.directories.execute(c);
+                } else {
+                    Crawler c = new Crawler(f.getAbsolutePath(), files, repository);
+                    this.files.execute(c);
+                }
             }
         }
     }
