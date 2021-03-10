@@ -9,7 +9,7 @@ import java.util.concurrent.ThreadFactory;
  * @author Hudson Schumaker
  */
 @Component
-public class  MsThreadFactory implements ThreadFactory {
+public class MsThreadFactory implements ThreadFactory {
 
     public static long number = 0L;
 
