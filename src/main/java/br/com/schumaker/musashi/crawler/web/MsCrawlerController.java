@@ -7,6 +7,10 @@ import org.springframework.web.bind.annotation.*;
 import static org.springframework.http.HttpStatus.ACCEPTED;
 import static org.springframework.http.HttpStatus.OK;
 
+/**
+ *
+ * @author Hudson Schumaker
+ */
 @RestController
 @RequestMapping("/crawler")
 public class MsCrawlerController {
@@ -17,16 +21,16 @@ public class MsCrawlerController {
     @ResponseStatus(ACCEPTED)
     @PostMapping
     public void startCrawler() {
-        set();
+        setRoot();
     }
 
     @ResponseStatus(OK)
     @GetMapping()
     public void start() {
-       set();
+        service.startCrawler("\\\\192.168.1.250\\Data2");
     }
 
-    private void set() {
+    private void setRoot() {
         service.startCrawler("\\\\192.168.1.250\\Data2");
     }
 }
