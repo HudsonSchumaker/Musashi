@@ -1,10 +1,13 @@
 package br.com.schumaker.musashi.search.service;
 
-import br.com.schumaker.musashi.crawler.model.db.MsDbFile;
+import br.com.schumaker.musashi.search.model.MsPageDTO;
 import br.com.schumaker.musashi.search.model.MsSearchDTO;
 
-import java.util.List;
-
+/**
+ *
+ * @author Hudson Schumaker
+ */
 public interface MsSearchService {
-    List<MsDbFile> search(MsSearchDTO msSearchDTO);
+    MsPageDTO search(MsSearchDTO msSearchDTO);
+    MsPageDTO searchByName(MsSearchDTO msSearchDTO);
 }

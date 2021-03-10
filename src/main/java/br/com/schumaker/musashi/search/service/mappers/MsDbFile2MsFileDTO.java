@@ -5,6 +5,10 @@ import br.com.schumaker.musashi.crawler.service.mappers.Mapper;
 import br.com.schumaker.musashi.search.model.MsFileDTO;
 import org.springframework.stereotype.Component;
 
+/**
+ *
+ * @author Hudson Schumaker
+ */
 @Component
 public class MsDbFile2MsFileDTO implements Mapper<MsDbFile, MsFileDTO> {
 
