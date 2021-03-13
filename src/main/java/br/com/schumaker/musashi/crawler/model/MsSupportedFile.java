@@ -31,6 +31,9 @@ public class MsSupportedFile {
         SUPPORTED_FILES.put(MusashiExtensions.ASP, new MsTxt());
         SUPPORTED_FILES.put(MusashiExtensions.ASPX, new MsTxt());
         SUPPORTED_FILES.put(MusashiExtensions.C,   new MsTxt());
+        SUPPORTED_FILES.put(MusashiExtensions.H,   new MsTxt());
+        SUPPORTED_FILES.put(MusashiExtensions.S,   new MsTxt());
+        SUPPORTED_FILES.put(MusashiExtensions.ASM, new MsTxt());
         SUPPORTED_FILES.put(MusashiExtensions.CS,  new MsTxt());
         SUPPORTED_FILES.put(MusashiExtensions.CPP, new MsTxt());
         SUPPORTED_FILES.put(MusashiExtensions.INO, new MsTxt());
