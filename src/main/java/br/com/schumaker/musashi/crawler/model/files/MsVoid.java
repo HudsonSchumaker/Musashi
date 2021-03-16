@@ -23,7 +23,7 @@ public class MsVoid extends MsFile implements MsReadable {
 
     @Override
     public String read() {
-        return "";
+        return "-";
     }
 
     @Override
