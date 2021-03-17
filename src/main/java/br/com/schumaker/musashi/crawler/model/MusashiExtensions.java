@@ -32,7 +32,6 @@ public class MusashiExtensions {
     public static final String HTM    = "htm";
     public static final String HTML   = "html";
     public static final String DHTML  = "dhtml";
-    public static final String JHTML  = "jhtml";
     public static final String SHTML  = "shtml";
     public static final String XHTML  = "xhtml";
 
