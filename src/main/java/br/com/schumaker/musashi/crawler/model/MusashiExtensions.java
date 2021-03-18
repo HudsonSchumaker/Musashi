@@ -26,7 +26,6 @@ public class MusashiExtensions {
     public static final String PEARL  = "pl";
     public static final String PYTHON = "py";
     public static final String RUBY   = "rb";
-    public static final String COLDFUSION = "cfm";
     public static final String INO = "ino";
 
     public static final String HTM    = "htm";
