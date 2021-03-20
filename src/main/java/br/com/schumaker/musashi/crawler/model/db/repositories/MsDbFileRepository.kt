@@ -1,18 +1,18 @@
-package br.com.schumaker.musashi.crawler.model.db.repositories;
+package br.com.schumaker.musashi.crawler.model.db.repositories
 
-import br.com.schumaker.musashi.crawler.model.db.MsDbFile;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.mongodb.repository.MongoRepository;
-import org.springframework.stereotype.Repository;
+import br.com.schumaker.musashi.crawler.model.db.MsDbFile
+import org.springframework.data.domain.Page
+import org.springframework.data.domain.Pageable
+import org.springframework.data.mongodb.repository.MongoRepository
+import org.springframework.stereotype.Repository
 
 /**
  *
  * @author Hudson Schumaker
  */
 @Repository
-public interface MsDbFileRepository extends MongoRepository<MsDbFile, String> {
+interface MsDbFileRepository : MongoRepository<MsDbFile?, String?> {
 
-    Page<MsDbFile> findByNameLike(String query, Pageable pageable);
-    Page<MsDbFile> findByContentLike(String query, Pageable pageable);
+    fun findByNameLike(query: String?, pageable: Pageable?): Page<MsDbFile?>?
+    fun findByContentLike(query: String?, pageable: Pageable?): Page<MsDbFile?>?
 }
