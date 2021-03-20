@@ -1,10 +1,10 @@
-package br.com.schumaker.musashi.crawler.model.db;
+package br.com.schumaker.musashi.crawler.model.db
 
-import lombok.Data;
-import org.bson.types.ObjectId;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.index.Indexed;
-import org.springframework.data.mongodb.core.mapping.Document;
+import lombok.Data
+import org.bson.types.ObjectId
+import org.springframework.data.annotation.Id
+import org.springframework.data.mongodb.core.index.Indexed
+import org.springframework.data.mongodb.core.mapping.Document
 
 /**
  *
@@ -12,16 +12,16 @@ import org.springframework.data.mongodb.core.mapping.Document;
  */
 @Data
 @Document
-public class MsDbFile {
-
+class MsDbFile {
     @Id
-    private ObjectId id;
+    private val id: ObjectId? = null
 
     @Indexed(unique = true)
-    private String name;
-    private String ext;
+    private val name: String? = null
+    private val ext: String? = null
+
     @Indexed(unique = true)
-    private String path;
-    private String content;
-    private long rank;
+    private val path: String? = null
+    private val content: String? = null
+    private val rank: Long = 0
 }
