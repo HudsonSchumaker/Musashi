@@ -42,7 +42,7 @@ public class MsSupportedFile {
         SUPPORTED_FILES.put(MusashiExtensions.PEARL, new MsTxt());
         SUPPORTED_FILES.put(MusashiExtensions.PYTHON, new MsTxt());
         SUPPORTED_FILES.put(MusashiExtensions.RUBY, new MsTxt());
-        SUPPORTED_FILES.put(MusashiExtensions.COLDFUSION, new MsTxt());
+
         SUPPORTED_FILES.put(MusashiExtensions.RTF, new MsRtf());
 
         SUPPORTED_FILES.put(MusashiExtensions.DOC, new MsDoc());
@@ -56,7 +56,7 @@ public class MsSupportedFile {
         SUPPORTED_FILES.put(MusashiExtensions.HTM,   new MsHtml());
         SUPPORTED_FILES.put(MusashiExtensions.HTML,  new MsHtml());
         SUPPORTED_FILES.put(MusashiExtensions.DHTML, new MsHtml());
-        SUPPORTED_FILES.put(MusashiExtensions.JHTML, new MsHtml());
+
         SUPPORTED_FILES.put(MusashiExtensions.SHTML, new MsHtml());
         SUPPORTED_FILES.put(MusashiExtensions.XHTML, new MsHtml());
     }
