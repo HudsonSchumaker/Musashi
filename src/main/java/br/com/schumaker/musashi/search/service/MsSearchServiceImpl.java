@@ -29,7 +29,7 @@ public class MsSearchServiceImpl implements MsSearchService {
         Pageable pageable = PageRequest.of(msSearchDTO.getPage(), msSearchDTO.getPageSize(),
                 Sort.by(Sort.Direction.DESC, "rank"));
 
-        Page<MsDbFile> page = repository.findByContentLike(msSearchDTO.getQuery(), pageable);
+        Page<MsDbFile> page = repository.findByContentIgnoreCaseLike(msSearchDTO.getQuery(), pageable);
 
         MsPageDTO pageDTO = buildMsPageDTO(msSearchDTO, page);
         pageDTO.setData(mapper.from(page.getContent()));

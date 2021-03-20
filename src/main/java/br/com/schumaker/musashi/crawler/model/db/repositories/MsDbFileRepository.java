@@ -14,5 +14,5 @@ import org.springframework.stereotype.Repository;
 public interface MsDbFileRepository extends MongoRepository<MsDbFile, String> {
 
     Page<MsDbFile> findByNameLike(String query, Pageable pageable);
-    Page<MsDbFile> findByContentLike(String query, Pageable pageable);
+    Page<MsDbFile> findByContentIgnoreCaseLike(String query, Pageable pageable);
 }

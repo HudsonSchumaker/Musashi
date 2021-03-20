@@ -27,10 +27,10 @@ public class MsCrawlerController {
     @ResponseStatus(OK)
     @GetMapping()
     public void start() {
-        service.startCrawler("\\\\192.168.1.250\\Data2");
+        service.startCrawler("\\\\192.168.1.250\\Data");
     }
 
     private void setRoot() {
-        service.startCrawler("\\\\192.168.1.250\\Data2");
+        service.startCrawler("\\\\192.168.1.250\\Data");
     }
 }
