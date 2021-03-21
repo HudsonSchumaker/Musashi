@@ -23,7 +23,7 @@ public class MsCrawlerServiceImpl implements MsCrawlerService {
 
     public MsCrawlerServiceImpl() {
         this.directories = Executors.newFixedThreadPool(256, new MsThreadFactory());
-        this.files = Executors.newFixedThreadPool(128, new MsReaderThreadFactory());
+        this.files = Executors.newFixedThreadPool(64, new MsReaderThreadFactory());
     }
 
     @Override
