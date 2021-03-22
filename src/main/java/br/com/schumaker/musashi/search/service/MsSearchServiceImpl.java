@@ -4,6 +4,7 @@ import br.com.schumaker.musashi.crawler.model.db.MsDbFile;
 import br.com.schumaker.musashi.crawler.model.db.repositories.MsDbFileRepository;
 import br.com.schumaker.musashi.search.model.MsPageDTO;
 import br.com.schumaker.musashi.search.model.MsSearchDTO;
+import br.com.schumaker.musashi.search.model.MsSearchExtDTO;
 import br.com.schumaker.musashi.search.service.mappers.MsDbFile2MsFileDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -45,7 +46,26 @@ public class MsSearchServiceImpl implements MsSearchService {
         return pageDTO;
     }
 
+    @Override
+    public MsPageDTO searchByExt(MsSearchExtDTO msSearchExtDTO) {
+        Pageable pageable = PageRequest.of(msSearchExtDTO.getPage(), msSearchExtDTO.getPageSize());
+        Page<MsDbFile> page = repository.findByExt(msSearchExtDTO.getQuery(), pageable);
+
+        MsPageDTO pageDTO = buildMsPageDTO(msSearchExtDTO, page);
+        pageDTO.setData(mapper.from(page.getContent()));
+        return pageDTO;
+    }
+
     private MsPageDTO buildMsPageDTO(MsSearchDTO msSearchDTO, Page<MsDbFile> page) {
+        MsPageDTO pageDTO = new MsPageDTO();
+        pageDTO.setPage(page.getNumber());
+        pageDTO.setPageSize(msSearchDTO.getPageSize());
+        pageDTO.setTotalPages(page.getTotalPages());
+        pageDTO.setTotalElements(page.getTotalElements());
+        return pageDTO;
+    }
+
+    private MsPageDTO buildMsPageDTO(MsSearchExtDTO msSearchDTO, Page<MsDbFile> page) {
         MsPageDTO pageDTO = new MsPageDTO();
         pageDTO.setPage(page.getNumber());
         pageDTO.setPageSize(msSearchDTO.getPageSize());
