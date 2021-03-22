@@ -2,11 +2,14 @@ package br.com.schumaker.musashi.search.web;
 
 import br.com.schumaker.musashi.search.model.MsPageDTO;
 import br.com.schumaker.musashi.search.model.MsSearchDTO;
+import br.com.schumaker.musashi.search.model.MsSearchExtDTO;
 import br.com.schumaker.musashi.search.service.MsSearchService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import javax.validation.Valid;
 
 import static org.springframework.http.HttpStatus.ACCEPTED;
 import static org.springframework.http.HttpStatus.OK;
@@ -39,5 +42,10 @@ public class MsSearchController {
     @PostMapping(value = "/name", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<MsPageDTO> searchByName(@RequestBody MsSearchDTO msSearchDTO) {
         return ResponseEntity.status(ACCEPTED).body(service.searchByName(msSearchDTO));
+    }
+
+    @PostMapping(value = "/ext", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<MsPageDTO> searchByExt(@Valid @RequestBody MsSearchExtDTO msSearchExtDTO) {
+        return ResponseEntity.status(ACCEPTED).body(service.searchByExt(msSearchExtDTO));
     }
 }
