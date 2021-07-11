@@ -13,5 +13,4 @@ class MusashiApplicationTests {
 	@Test
 	void contextLoads() {
 	}
-
 }
