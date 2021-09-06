@@ -10,7 +10,7 @@ import org.springframework.stereotype.Repository;
  *
  * @author Hudson Schumaker
  */
-@Repository
+@Repository 
 public interface MsDbFileRepository extends MongoRepository<MsDbFile, String> {
 
     Page<MsDbFile> findByNameLike(String query, Pageable pageable);
