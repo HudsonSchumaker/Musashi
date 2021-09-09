@@ -10,7 +10,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest
 class MusashiApplicationTests {
 
-	@Test
-	void contextLoads() {
-	}
+      @Test
+      public void contextLoads() {
+      }
 }
