@@ -5,7 +5,7 @@ import lombok.NoArgsConstructor;
 
 /**
  *
- * @author Hudson Schumaker 
+ * @author Hudson Schumaker
  */
 @Data
 @NoArgsConstructor
