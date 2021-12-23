@@ -16,7 +16,7 @@ import static org.springframework.http.HttpStatus.OK;
 
 /**
  *
- * @author Hudson Schumaker 
+ * @author Hudson Schumaker
  */
 @RestController
 @RequestMapping("/search")
